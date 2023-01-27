@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="54dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="331dp"
+        app:layout_constraintBottom_toTopOf="@+id/saskaitos_index"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_textView"
+        android:layout_width="106dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="209dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="39dp"
+        android:text="Welcome Aldona"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/saskaitos_index"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/transfer"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="32dp"
+        android:text="TRANSFER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_index_add_account"
+        app:layout_constraintTop_toBottomOf="@+id/saskaitos_index" />
+
+    <ListView
+        android:id="@+id/saskaitos_index"
+        android:layout_width="396dp"
+        android:layout_height="464dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/transfer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button_index_log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="28dp"
+        android:text="Log out"
+        app:layout_constraintBottom_toTopOf="@+id/saskaitos_index"
+        app:layout_constraintEnd_toStartOf="@+id/welcome_textView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_index_add_account"
+        android:layout_width="143dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="46dp"
+        android:text="Add account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/transfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saskaitos_index" />
+
+    <Button
+        android:id="@+id/button_index_transfer_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="21dp"
+        android:text="Transfer history"
+        app:layout_constraintBottom_toTopOf="@+id/transfer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saskaitos_index" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
