@@ -148,6 +148,10 @@ public class SQLService {
 
                     Statement statement = sqlConnectionService.getConnection().createStatement();
 
+                    if(newSumLocal.compareTo(BigDecimal.ZERO) >= 0){
+                        return false;
+                    }
+
                     statement.executeUpdate(queryLocal);
                     statement.executeUpdate(foreignQuery);
                     statement.executeUpdate(paymentLogQuery);
