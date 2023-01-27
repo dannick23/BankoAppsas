@@ -148,9 +148,7 @@ public class SQLService {
 
                     Statement statement = sqlConnectionService.getConnection().createStatement();
 
-                    if(newSumLocal.compareTo(BigDecimal.ZERO) >= 0){
-                        return false;
-                    }
+                    validateOperationIsPossible(newSumLocal);
 
                     statement.executeUpdate(queryLocal);
                     statement.executeUpdate(foreignQuery);
@@ -170,6 +168,12 @@ public class SQLService {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    private void validateOperationIsPossible(BigDecimal newSumLocal) {
+        if(0 > newSumLocal.compareTo(BigDecimal.ZERO)){
+            throw new IllegalArgumentException("Trying to transfer more than possible");
         }
     }
 
