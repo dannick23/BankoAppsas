@@ -63,12 +63,12 @@ public class PinLoginActivity extends AppCompatActivity {
                     pinStatus.setText("Login failed!\n Try again.");
                 }
             } else {
-                pinStatus.setText("Pin must be between 1 and 6 digits");
+                pinStatus.setText("Pin must be between 4 and 6 digits");
             }
         };
     }
 
     private boolean validatePin(String pinPass) {
-        return !pinPass.isEmpty() && pinPass.length() <= 6;
+        return !pinPass.isEmpty() && pinPass.length() <= 6 && pinPass.length() >= 4;
     }
 }

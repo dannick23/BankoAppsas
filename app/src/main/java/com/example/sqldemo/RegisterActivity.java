@@ -94,8 +94,8 @@ public class RegisterActivity extends AppCompatActivity {
         if (userDTO.getAsmensKodas().length() != 11 && registerAsmensKodas.getText().toString().matches(".*\\d.*")) {
             return "Invalid social security number!";
         }
-        if (!userDTO.getPin().matches(".*\\d.*") && registerPin.getText().toString().length() <= 6) {
-            return "The pin code must not exceed 6 symbols and be only numeric!";
+        if (!userDTO.getPin().matches(".*\\d.*") && registerPin.getText().toString().length() <= 6 && registerPin.getText().toString().length() >= 4) {
+            return "The pin code must be between 4 and 6 symbols and only numeric!";
         }
 
         return "YES";
