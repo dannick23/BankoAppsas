@@ -3,60 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/bg"
     android:layout_height="match_parent">
 
     <EditText
         android:id="@+id/edittext_pin_password"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="101dp"
-        android:layout_marginBottom="250dp"
         android:ems="10"
-        android:inputType="numberPassword"
         android:hint="Enter your pin code"
-        app:layout_constraintBottom_toTopOf="@+id/button_pin_submit"
+        android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_pin_status" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/button_pin_submit"
         android:layout_width="93dp"
         android:layout_height="57dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="150dp"
         android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_pin_login_another_user"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_pin_login_another_user"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_pin_password" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textview_pin_status"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="275dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/edittext_pin_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_pin_login_another_user"
         android:layout_width="278dp"
         android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="257dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="30dp"
         android:text="Login using different account"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_pin_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="177dp"
+        android:text="Log In"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_pin_password" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
